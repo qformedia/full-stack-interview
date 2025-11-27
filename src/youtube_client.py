@@ -12,7 +12,7 @@ API_KEY = os.getenv("YOUTUBE_API_KEY")
 BASE_URL = "https://www.googleapis.com/youtube/v3"
 
 # Quantum Tech HD channel ID
-CHANNEL_ID = "UCpOlgrEqL1Adr2oDBh2bDXw"
+CHANNEL_ID = "UC4Tklxku1yPcRIH0VVCKoeA"
 
 
 class YouTubeClient:
@@ -49,7 +49,6 @@ class YouTubeClient:
         
         response = requests.get(playlist_url, params=params)
         playlist_data = response.json()
-        
         video_ids = []
         for item in playlist_data["items"]:
             video_ids.append(item["snippet"]["resourceId"]["videoId"])
